@@ -1,0 +1,11 @@
+com\parcial\entidades\Estudiante.class
+com\parcial\controller\CompartidoController.class
+com\parcial\controller\EstudianteController.class
+com\parcial\controller\EstudianteWebController.class
+com\parcial\repository\EstudianteRepository.class
+com\parcial\controller\CoordinadorWebController.class
+com\parcial\Noexception\NotFoundException.class
+com\parcial\repository\CoordinadorRepository.class
+com\parcial\Parcial2Application.class
+com\parcial\controller\CoordinadorController.class
+com\parcial\entidades\Coordinador.class

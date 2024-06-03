@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Asociación</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+       
+		body {
+		    display: flex;
+		    justify-content: center;
+		    align-items: center;
+		    height: 100vh;
+		    background-image: url('						https://literatura.uniandes.edu.co/files/2021/04/190220_notaIcfesPruebasSaber11_1800-e1644007712500.jpeg');
+		    background-size: 1100px; /* Ajusta la imagen de fondo para cubrir todo el contenedor */
+		    background-repeat: no-repeat; /* Evita que la imagen se repita */
+		    background-position: center bottom; /* Centra la imagen de fondo */
+		    margin: 0;
+		    padding: 0;
+		}
+
+        .container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8); /* Color de fondo blanco con opacidad */
+            padding: 30px; /* Espaciado interno */
+            border-radius: 15px; /* Bordes redondeados */
+            box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2); /* Sombra */
+        }
+
+        .title {
+            margin-bottom: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Tipografía amigable */
+            font-size: 2.5rem; /* Tamaño del título */
+        }
+
+        .btn-container {
+            margin-top: 20px;
+        }
+
+        .btn-large {
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>¿Como Desea Ingresar a las Pruebas Saber Pro?</h1>
+        </div>
+        <div class="btn-container">
+            <a th:href="@{/Coordinador/login}" class="btn btn-primary btn-lg btn-large">Coordinador</a>
+            <a th:href="@{/Estudiante/login}" class="btn btn-success btn-lg btn-large">Estudiante</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Principal-Alumno</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<style>
+	
+	body{
+		background-color: 		#b5b5b3;
+	}
+.card {
+    margin-bottom: 20px;
+    border-radius: 25px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: rgb(0, 64, 128);
+    color:white;
+    border-radius: 15px 15px 0 0;
+}
+
+.card-body p {
+    margin-bottom: 5px;
+}
+
+.text-resaltado {
+    font-weight: bold; /* Resalta el texto normal */
+}
+
+
+.opciones {
+    display: flex; /* Flexbox para alinear los elementos */
+    justify-content: right; /* Centra horizontalmente los elementos */
+    margin-top: 3px; /* Margen superior */
+}
+
+.opciones .btn {	
+    margin: 0 10px; /* Margen entre los botones */
+}
+
+.nivel-bajo{
+    color: rgb(245, 71, 71); /* Cambia el color del texto para el nivel 1 a azul */
+}
+
+.nivel-medio {
+    color: rgb(72, 127, 247); /* Cambia el color del texto para el nivel 2 a verde */
+}
+
+.nivel-alto {
+    color: rgb(245, 180, 0); /* Cambia el color del texto para el nivel 3 a naranja */
+}
+
+.nivel-muyalto{
+    color: rgb(37, 219, 37); /* Cambia el color del texto para el nivel 4 a rojo */
+} 
+
+</style>
+</head>
+<br>
+<br>
+<body>
+
+<div class="container">
+ <div class="opciones">
+        <a class="btn btn-danger" th:href="@{/Estudiante/login}">Cerrar Sesión <i class="bi bi-box-arrow-right"></i></a>
+    </div>
+    <br>
+ 
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h1 class="mb-0 text-resaltado">Datos Personales</h1> 
+                </div>
+                <div class="card-body">
+					   <h1 class="mb-0 text-resaltado">Informacion</h1> 
+					               </div>
+					               <div class="card-body">
+					                   <p><span class="text-resaltado">Nombre:</span> <span th:text="${Nombre}"></span></p>
+					                
+					                   <p><span class="text-resaltado">Segundo Apellido:</span> <span th:text="${Apellido}"></span></p>
+					                  
+					                   <p><span class="text-resaltado">Número Telefónico:</span> <span th:text="${Telefono}"></span></p>
+									   <p><span class="text-resaltado">Número Telefónico:</span> <span th:text="${Correo}"></span></p>
+					                   <p><span class="text-resaltado">Número de Registro:</span> <span th:text="${Registro}"></span></p>
+									   <p><span class="text-resaltado">Puntaje General:</span> <span th:text="${PuntajeGeneral}"></span></p>
+
+									   <p><span class="text-resaltado">Saber Pro Nivel:</span> <span th:text="${PuntajeNivel}"></span></p>
+					               </div>
+					           </div>
+					       </div>
+					       <div class="col-md-6">
+					           <div class="card">
+					               <div class="card-header">
+					                   <h3 class="mb-0 text-resaltado">Notas</h3> 
+					               </div>
+					               <div class="card-body">
+					                  
+														<p><span class="text-resaltado">Puntaje Comunicación Escrita:</span> <span class="nivel-alto" th:text="${ComunE}"></span></p>
+									
+									                    
+									                    <p><span class="text-resaltado">Puntaje Razonamiento Cuantitativo:</span> <span class="nivel-medio" th:text="${RazonC}"></span></p>
+									                   
+									                    <p><span class="text-resaltado">Puntaje Lectura Crítica:</span> <span class="nivel-medio" th:text="${LeC}"></span></p>
+									                  
+									                    <p><span class="text-resaltado">Puntaje Competencias Ciudadanas:</span> <span class="nivel-bajo" th:text="${CompC}"></span></p>
+									                  
+									                    <p><span class="text-resaltado">Puntaje Inglés:</span> <span class="nivel-medio" th:text="${Ingl}"></span></p>
+														<p><span class="text-resaltado">Nivel Inglés:</span> <span class="nivel-medio" "text-resaltado">A2</span></p>
+									                    
+									                    <p><span class="text-resaltado">Puntaje Formulación De Proyectos De Ingeniería:</span> <span class="nivel-medio" th:text="${FormProyectos}"></span></p>
+									                   
+									                    <p><span class="text-resaltado">Puntaje Pensamiento Científico-Matemáticas Y Estadística:</span> <span class="nivel-medio" th:text="${PenCientifico}"></span></p>
+									                  
+									                    <p><span class="text-resaltado">Puntaje Diseño De Software:</span> <span class="nivel-muyalto" th:text="${Diseño}"></span></p>
+									               
+					                  
+					                  
+					             
+					
+									                  </div>
+									              </div>
+									          </div>
+											  <div class="col-md-6">
+											  	 <div class="card">
+											  	<div class="card-header">
+											  	<h3 class="mb-0 text-resaltado">Significado de colores de las notas</h3> <!-- Resalta el texto normal -->
+											  	 </div>
+											  	<div class="card-body">
+												<p>Las notas de color <span class="nivel-bajo"><strong>rojo</strong></span> corresponden a <strong>Nivel 1</strong>.</p>
+												                        <p>Las notas de color <span class="nivel-medio"><strong>azul</strong></span> corresponden a <strong>Nivel 2</strong>.</p>
+												                        <p>Las notas de color <span class="nivel-alto"><strong>amarillo</strong></span> corresponden a <strong>Nivel 3</strong>.</p>
+												                        <p>Las notas de color <span class="nivel-muyalto"><strong>verde</strong></span> corresponden a <strong>Nivel 4</strong>.</p>
+												                    </div>
+											 	 </div>
+											  	</div>
+											  															   
+											  									   
+											  									   </body>
+									      </div>
+									   </div>
+									   
+									   
+									  </html>
